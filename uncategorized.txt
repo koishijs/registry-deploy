@@ -1,0 +1,9 @@
+@rinkuto/koishi-plugin-young-study
+koishi-plugin-alapi
+koishi-plugin-alindev
+koishi-plugin-chatgptlbw
+koishi-plugin-feedback
+koishi-plugin-lunatic
+koishi-plugin-recall
+koishi-plugin-rpixiv
+koishi-plugin-sanae

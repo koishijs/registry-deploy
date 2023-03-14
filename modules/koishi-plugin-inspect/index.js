@@ -1,0 +1,7 @@
+var m=Object.defineProperty;var D=Object.getOwnPropertyDescriptor;var x=Object.getOwnPropertyNames;var y=Object.prototype.hasOwnProperty;var f=(t,e)=>()=>(t&&(e=t(t=0)),e);var l=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports);var d=(t,e,a,p)=>{if(e&&typeof e=="object"||typeof e=="function")for(let n of x(e))!y.call(t,n)&&n!==a&&m(t,n,{get:()=>e[n],enumerable:!(p=D(e,n))||p.enumerable});return t},u=(t,e,a)=>(d(t,e,"default"),a&&d(a,e,"default"));var q=t=>d(m({},"__esModule",{value:!0}),t);import{Buffer as o}from"https://registry.koishi.chat/modules/buffer/index.js";import s from"https://registry.koishi.chat/modules/process/index.js";var c=f(()=>{});var i={};import*as M from"https://registry.koishi.chat/modules/koishi/index.js";var I=f(()=>{c();u(i,M)});var g=l((O,v)=>{v.exports={commands:{inspect:{description:"查看用户、频道或消息的详细信息",usage:`inspect @user
+inspect #channel
+inspect`,messages:{invalid:"参数无法解析。",user:"用户 ID：{id}",channel:"频道 ID：{id}",message:`消息 ID：{messageId}
+频道 ID：{channelId}
+群组 ID：{guildId}
+用户 ID：{userId}
+自身 ID：{selfId}`}}}}});var b=l(r=>{c();Object.defineProperty(r,"__esModule",{value:!0});r.apply=r.Config=r.name=void 0;var h=(I(),q(i));r.name="inspect";r.Config=h.Schema.object({});function _(t){t.i18n.define("zh",g()),t.command("inspect").action(({session:e},a)=>{if(e.quote)return e.text(".message",{...e.quote,selfId:e.selfId});if(a){let{type:p,data:n}=h.segment.parse(a)[0];return p==="at"?e.text(".user",n):p==="sharp"?e.text(".channel",n):e.text(".invalid")}return e.text(".message",e)})}r.apply=_});export default b();
